@@ -43,7 +43,12 @@ table {
   border-spacing: 0;
 }
 
-/*fonts*/
+/*utiity classes*/
+  /*relative*/
+  /*absolute*/
+  /*boxed*/
+  /*full-width*/
+
 /*clearfix*/
 .cf:before,
 .cf:after,
@@ -59,23 +64,42 @@ table {
 .sub-menu:after {
   clear: both;
 }
-/*general structure*/
-/*utiity classes*/
-  /*relative*/
-  /*absolute*/
-  /*boxed*/
-  /*full-width*/
 
-/*paddings-margins*/
+
+/*STRUCTURE*/
+  /*paddings-margins*/
   
-/*general elements*/
-/*main-colors variables*/
-  /*navy*/
-  /*gold*/
-
+/*GENERAL STYILING*/
+/*colors*/
+:root { /*navy*/
+--navy-color:#1b2535;
+--navy-bg-color: #1b2535;
+}
+:root { /*gold*/
+  --gold-color: #b37c57;
+  --gold-bg-color: #b37c57;
+}
+/*main elements*/
 /*h1*/
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  line-height: 60px;
+}
 /*h2*/
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 54px;
+}
 /*h4*/
+h4{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--gold-color: #b37c57);
+}
 /*p*/
 /*a*/
 a {
@@ -101,3 +125,8 @@ a:hover {
 /*home*/
 /*hero header*/
 
+
+/*footer*/
+footer {
+  background-color: var(--navy-bg-color, midnightblue);
+}
