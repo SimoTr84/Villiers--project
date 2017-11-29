@@ -27,14 +27,18 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -44,69 +48,100 @@ table {
 }
 
 /*utiity classes*/
-  /*relative*/
-  /*absolute*/
-  /*boxed*/
-  /*full-width*/
+/*relative*/
+/*absolute*/
+/*boxed*/
+/*full-width*/
 
 /*clearfix*/
-.cf:before,
-.cf:after,
-.menu-footer-menu-container:before,
-.menu-footer-menu-container:after,
-.sub-menu:before,
-.sub-menu:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
-}
-.cf:after,
-.menu-footer-menu-container:after,
-.sub-menu:after {
-  clear: both;
+/*.clearfix:before,
+.footer:before {
+  content: '';
+  display: table;
 }
 
+.clearfix:after,
+.footer:after {
+  content: '';
+  display: table;
+  clear: both;
+}*/
 
 /*STRUCTURE*/
-  /*paddings-margins*/
-  
+/*paddings-margins*/
+body {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.boxed {
+  padding: 15%;
+}
+section {
+  margin: 50px auto;
+}
+
+
 /*GENERAL STYILING*/
+/*fonts*/
+:root {
+  --playfair-font: 'Playfair Display', serif;;
+}
+:root {
+  --source-sans-font: 'Source Sans Pro', sans-serif;
+}
+
 /*colors*/
-:root { /*navy*/
---navy-color:#1b2535;
---navy-bg-color: #1b2535;
+:root {
+  /*navy*/
+  --navy: #1b2535;
+  /*dark navy*/
+  --darknavy: #182638;
+  /*gold*/
+  --gold: #b37c57;
+  /*white*/
+  --white: #ffffff;
 }
-:root { /*gold*/
-  --gold-color: #b37c57;
-  --gold-bg-color: #b37c57;
-}
+
 /*main elements*/
-/*h1*/
+
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 55px;
-  line-height: 60px;
+  font-family: var(--playfair-font);
+  font-size: 3.4375em;
+  line-height: 3.75em;
 }
-/*h2*/
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  line-height: 54px;
+  font-family: var(--playfair-font);
+  font-size: 2.25em;
+  line-height: 2.625em;
 }
-/*h4*/
-h4{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 13px;
-  line-height: 16px;
+h3 {
+  font-family: var(--source-sans-font);
+  color: var(--white);
+}
+h4, h5 {
+  font-family: var(--source-sans-font);
+  font-size: 0.8125em;
+  line-height: 1em;
   text-transform: uppercase;
-  color: var(--gold-color: #b37c57);
+  color: var(--gold);
 }
-/*p*/
-/*a*/
+h5 {
+  font-family: var(--playfair-font);
+}
+p {
+  font-family: var(--source-sans-font);
+  font-size: 0.875em;
+  line-height: 2.0625em;
+
+}
 a {
   text-decoration: none;
-  font-size: inherit;
-  font-family: inherit;
-  color: #b37c57;
+  font-size: 0.875em;
+  font-family: var(--playfair-font);
+  color: var(--gold);
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
@@ -119,14 +154,58 @@ a:hover {
 .white-bg a:focus,
 .cream-bg a:hover,
 .cream-bg a:focus {
-  color: #182638
+  color: #182638;
 }
+a.button{
+  color: #b37c57 !important;
+display: inline-flex;
+  zoom: 1;*/
+/*  _height: 51px;*/
+  margin: 0 auto;
+  padding: 27px 35px 27px 38px;
+  border: none;
+  box-shadow: inset 0px 0px 0px 3px var(--gold);
+    -webkit-box-shadow: inset 0px 0px 0px 3px var(--gold);
+    -moz-box-shadow: inset 0px 0px 0px 3px var(--gold);
+  font-family: var(--source-sans-font);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+  background-color: transparent;
+  cursor: pointer;
+}
+a.button:hover {
+  background-color: var(--gold);
+  color: var(--white) !important;
+} 
+ul {
+  display: flex;
+}
+li {
+  display: inline-flex;
+  padding: 0 4%;
+}
+section {
+  display: flex;
+}
+
 
 /*home*/
 /*hero header*/
+.hero {
+  display: block;
+  width: 100%;
+  min-height: 80vh;
+}
 
 
 /*footer*/
 footer {
-  background-color: var(--navy-bg-color, midnightblue);
+  background-color: var(--navy, midnightblue);
 }
