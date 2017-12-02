@@ -68,53 +68,62 @@ table {
 }*/
 
 /*STRUCTURE*/
-/*paddings-margins*/
+html, 
 body {
-  max-width: 100%;
+  height: 100%;
   width: 100%;
-  padding: 0;
-  margin: 0;
+
 }
-.boxed {
-  padding: 15%;
-}
+
 section {
-  margin: 50px auto;
 }
 
 
-/*GENERAL STYILING*/
-/*fonts*/
+/*utility classes*/
+.browser-height {
+  min-height: 750px;
+  height: 100vh;
+}
+.box-wide {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+.box-narrow {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+.expanded {
+  display: flex;
+  direction: column;
+}
+
+/*GENERAL STYLING*/
+
 :root {
-  --playfair-font: 'Playfair Display', serif;;
-}
-:root {
-  --source-sans-font: 'Source Sans Pro', sans-serif;
-}
-
 /*colors*/
-:root {
-  /*navy*/
   --navy: #1b2535;
-  /*dark navy*/
   --darknavy: #182638;
-  /*gold*/
   --gold: #b37c57;
-  /*white*/
   --white: #ffffff;
+/*fonts*/
+  --playfair-font: 'Playfair Display', serif;;
+  --source-sans-font: 'Source Sans Pro', sans-serif;
 }
 
 /*main elements*/
 
 h1 {
   font-family: var(--playfair-font);
-  font-size: 3.4375em;
-  line-height: 3.75em;
+  font-size: 4.4375em;
+  line-height: 0.9342105263em;
+  letter-spacing: 2px;
 }
 h2 {
   font-family: var(--playfair-font);
   font-size: 2.25em;
-  line-height: 2.625em;
+  line-height: 1.2857142857em;
 }
 h3 {
   font-family: var(--source-sans-font);
@@ -157,10 +166,9 @@ a:hover {
   color: #182638;
 }
 a.button{
-  color: #b37c57 !important;
-display: inline-flex;
-  zoom: 1;*/
-/*  _height: 51px;*/
+  color: #b37c57;
+  display: inline-flex;
+  zoom: 1;
   margin: 0 auto;
   padding: 27px 35px 27px 38px;
   border: none;
@@ -182,30 +190,116 @@ display: inline-flex;
 }
 a.button:hover {
   background-color: var(--gold);
-  color: var(--white) !important;
+  color: var(--white);
 } 
 ul {
   display: flex;
+  flex-direction: column;
 }
 li {
-  display: inline-flex;
   padding: 0 4%;
 }
-section {
-  display: flex;
-}
-
 
 /*home*/
-/*hero header*/
+/*hero*/
 .hero {
-  display: block;
-  width: 100%;
-  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 100%;
+  text-align: center;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/Villiers-CorpHosp-HeaderImages-RoyalAscot-1600x1033.jpg"); 
+  background-size: cover;
+  width: auto;
+}
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-menu {
+  display: flex;
+  flex: 2;
+  justify-content: flex-start;
+}
+.main-menu i{
+  justify-content: flex-start;
+  font-size: 30px;
+  color: var(--white);
+  font-weight: 400;
+}
+.main-menu--wrapper {
+  display: none;
 }
 
+.logo--container {
+  flex-grow: 25;
+}
+  .logo--container img {
+    align-items: center;
+    width: 175px;
+    margin-top: 50px;
+    transform: translateX(50%);
+  }
+.phone-number--container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+  .contact-number {
+    font-family: var(--source-sans-font);
+    font-size: 0.8125em;
+    line-height: 1em;
+    letter-spacing: 1px;
+    color: var(--gold);
+  }
+  .fa-phone {
+    margin-right: 8px;
+  }
+
+.search-icon--container {
+  /*flex-grow: 1;*/
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 4%;
+}
+  .search-icon--container i {
+    font-size: 1.125em;
+    line-height: 1em;
+    color: var(--white);
+  }
+
+.title--container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  width: 80%;
+  max-width: 1050px;
+  height: 100%;
+  margin: 0 auto;
+}
+.main-title {
+  color: var(--white);
+/*  margin-top: 60px;
+  margin-bottom: 50px;  */
+}
 
 /*footer*/
 footer {
   background-color: var(--navy, midnightblue);
+}
+
+/*media-queries*/
+@media only screen and (max-width: 1400px), screen and (max-height: 880px) {
+  .main-title {
+    font-size: 3.4375em;
+    line-height: 1.0666666667em;
+    margin-bottom: 50px;
+  }
 }

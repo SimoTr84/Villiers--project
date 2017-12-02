@@ -1,2 +1,4 @@
-console.log("Hello World");
-console.log("$");
+// hamburger menu
+	$('.main-menu-wrapper').click(function(){
+	  $(this).toggleClass("expanded");
+	});
