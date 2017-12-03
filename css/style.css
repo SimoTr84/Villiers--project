@@ -403,31 +403,130 @@ a.section-two--button {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.section-four--container--one {
-  align-self: stretch;
+  max-width: 1300px;
+  background-image: url(../assets/villiers--logo-emblem.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81%;
+  background-size: 75% 150px;
 }
 
+.section-four--container-one {
+  align-self: stretch;
+  text-align: center;
+  padding: 80px 2% 190px;
+}
+.section-four--title-container {
+  padding-bottom: 40px;
+}
+  .section-four--title {
+    margin-bottom: 20px;
+  }
+  .section-four--subtitle {
+    font-family: var(--source-sans-font);
+    color: var(--gold);
+    font-size: 0.875em;
+    font-weight: 600;
+    line-height: 1.4285714286em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.column-left {
+  display: flex;
+  flex-basis: 130vw;
+}
+
+.column-right {
+  display: flex;    
+  flex-wrap: wrap;
+}
+
+.boxes--wrapper {
+  display: flex;
+  height: 640px;
+  margin: 0 5%;
+}
+
+.box {
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  padding: 0 50px 50px 50px;
+}
+
+.box--title {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.box--link {
+  font-family: var(--source-sans-font);
+  letter-spacing: 4px;
+  margin-left: 50px;
+  position: relative;
+}
+  .box--link:before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: #b37c57;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 
 .box-one {
   background: 
     linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
     url("../assets/villiers-taylor-swift.jpg");
+  background-size: cover;
+  background-position: left;
 }
 
 .box-two {
   background: 
     linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
     url("../assets/villiers-eminem.jpg");
+  background-size: cover;
+  background-position: left;
 }
 
 .box-three {
   background: 
     linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
     url("../assets/villiers-balthazar.jpg");
+  background-size: cover;
+  background-position: left;
 }
 
+.cta--container {
+  text-align: center;
+}
 
+.cta--title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cta--subtitle {
+  font-family: var(--source-sans-font);
+  color: var(--gold);
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 1.4285714286em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.signup--container {
+  margin-top: 30px;
+}
 
 .signup--input {
   padding: 20px 20px;
@@ -437,8 +536,6 @@ a.section-two--button {
   font-size: 18px;
   line-height: 22px;
 }
-
-
 /*footer*/
 footer {
   background-color: var(--navy);
@@ -532,17 +629,28 @@ footer {
     margin-bottom: 50px !important;
   }
   h2,
-  .section-two--title  {
+  .section-two--title,
+  .box--title  {
     font-size: 2.25em;
     line-height: 1.1666666667em;
     margin-bottom: 25px;
   } 
+  .box-title {
+    font-size: 2.125em;
+    line-height: 1.1764705882em;
+  }
+}
 
+@media only screen and (max-width: 1280px) {
+  .column-right {  
+    flex-wrap: nowrap;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   h2,
-  .section-two--title {
+  .section-two--title,
+  .box--title {
     font-size: 1.65em;
     line-height: 1.5333333333em;
   }
