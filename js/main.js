@@ -1,4 +1,6 @@
-// hamburger menu
-	$('.main-menu-wrapper').click(function(){
-	  $(this).toggleClass("expanded");
+$( document ).ready(function() {
+	$(".fa-bars").click(function(){
+		$("main-menu--wrapper").toggleClass(".browser-height");
+		$("main-menu--wrapper").toggleClass(".expanded");
 	});
+});

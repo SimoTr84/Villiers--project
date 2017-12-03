@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Source+Sans+Pro:400,600,700,900" rel="stylesheet">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <title>Villiers Project</title>
 </head>
@@ -16,11 +16,10 @@
   <section class="section-one">
     <div class="hero browser-height">
         <div class="header box-wide">
-          <!-- main-menu/hamburger menu -->
           <div class="main-menu">
             <i class="fa fa-bars fa-3" aria-hidden="true"></i>
             <div class="main-menu--wrapper">
-              <ul>
+              <ul class="menu">
                 <li><a href="#" class="main-menu--item">Who we are</a></li>
                 <li><a href="#" class="main-menu--item">What we do</a></li>
                 <li><a href="#" class="main-menu--item">Our Journal</a></li>
@@ -28,49 +27,178 @@
               </ul>
             </div>
           </div>
-          <!-- logo -->
           <div class="logo--container">
             <a href="#">
               <img src="assets/villiers--logo.svg" alt="Villiers Logo">
             </a>
           </div>
-          <!-- phone-number -->
           <div class="phone-number--container">
             <a href="tel:+442037453537" class="contact-number">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span class="phone-number--number">+44 (0)203 745 3537</span>
               </a>
           </div>
-          <!-- search-icon -->
           <div class="search-icon--container">
             <i class="fa fa-search" aria-hidden="true"></i>
           </div>
         </div>
-      <!-- hero -->
         <div class="title--container">
           <h1 class="main-title">Creating Unforgettable Experiences</h1>
           <a class="button" href="#">What We Do</a>
         </div>
     </div>
   </section>
-  <!-- who we are -->
-  <section class="who-we-are section-two">
-    <div class="section-two--container">
-      <h5 class="section-label section-label--horizontal">
+  <!-- section-two -->
+  <section class="section-two">
+    <!-- <h5 class="section-label section-label--horizontal">
        Who we are
-      </h5>
-      <h3 class="section-label section-two--title">
+    </h5> -->
+    <div class="section-two--title-container">
+      <h2 class="section-two--title">
         For anything that brings people together to celebrate an occasion, we create truly memorable experiences that you will cherish forever!
-      </h3>
-      <img class="section-two--img" src="assets/Villiers-WhoWeAre-02-1000x1000.png" alt="Who we are">
+      </h2>
+      <a class="button section-two--button" href="#">Read More</a>
+    </div>
+    <div class="section-two--img-container">
+      <img src="assets/Villiers-WhoWeAre-02-1000x1000.png" alt="Who we are">
     </div>
   </section>
-  <section class="section-three parallax">
+  <!-- section-three -->
+  <section class="section-three">
+    <div class="slide slide-one browser-height">
+<!--       <div class="slide--container">  -->
+        <h5 class="slide--label">By Design</h5>
+        <div class="slide--inner-content">
+          <h3>As experience becomes the luxury of today, discover</h3>
+          <h1>Villiers' exclusive brochure!</h1>
+          <a class="button slider_button" href="#">Read More</a>
+        </div>
+<!--       </div> -->
+    </div>
+  </section>
+  <!-- section-four -->
+  <section class="section-four">
+    <div class="section-four--container-one">
+<!--       <h5 class="section-label section-label--vertical">
+        Be Inspired...
+      </h5> -->
+      <h2>
+        Out of desire, to inspire
+      </h2>
+      <h4>
+        <a href="#">Browse Our Journal</a>
+      </h4> 
+      <div class="boxes--wrapper">
+        <div class="column_left">
+          <div class="box box-one">
+            <div class="box-one--content__container">
+              <h3 class="boxes__title">Will Taylor Swift perform in Scotland in 2018?</h3>
+              <span class="boxes__link">Read more</span>
+            </div>
+          </div>
+        </div>
+        <div class="column_right">
+          <div class="box box-two">
+            <div class="box-two--content__container">
+              <h3 class="boxes--title">Peter Kay UK and Ireland Arena Tour 2018-19</h3>
+              <span class="boxes--link">Read more</span>
+            </div>
+          </div>
+          <div class="box box-three">
+            <div class="image--overlay">
+              <img src="" alt="" class="box-three--image">
+            </div>  
+            <div class="box-three--content--container">
+              <h3 class="boxes--title">Taylor Swift stadium tour announced US tour dates!</h3>
+              <span class="boxes--link">Read more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-four--container-two">
+      <div class="cta--container">
+        <img src="../assets/villiers--logo-emblem.svg" alt="" class="logo_large">
+        <h2 class="cta--title">
+          Put yourself in the know and discover the most exclusive upcoming events before anyone else.
+        </h2>
+        <h4 class="cta--subtitle">
+         Sign up to our Newsletter
+        </h4>
+        <div class="signup--container">
+          <input type="text" class="signup--input" placeholder="Email address">
+         <a class="button submit-button" href="#">Send</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<footer>
+  <div class="footer--wrapper box-wide">
+    <div class="footer-menu--container">
+      <ul class="footer-menu">
+        <li class="footer-menu--item">
+          <a href="#">Who we are</a>
+        </li>
+        <li class="footer-menu--item">
+          <a href="#">What we do</a>
+        </li>
+        <li class="footer-menu--item">
+          <a href="#">Our Journal</a>
+        </li>
+        <li class="footer-menu--item">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom--container">
+      <div class="first-column">
+        <div class="social-icons">
+          <a href="" class="social--icon">
+            <img src="assets/linkedin--social_icon.png" alt="">
+          </a>
+          <a href="" class="social--icon"><img src="assets/twitter--social_icon.png" alt=""></a>
+          <a href="" class="social--icon"><img src="assets/instagram--social_icon.png" alt=""></a>
+        </div>
+        <div class="copyright">
+          <p class="copyright--text">
+            © Copyright Simone 2017. All rights reserved. Website by... ME!!
+          </p>
+      </div>
+    </div>
+    <a href="" class="footer--logo">
+      <img src="assets/villiers--footer-logo.svg">
+    </a> 
+      <div class="footer--secondary-menu">
+        <ul>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Terms and Conditions</a>
+          </li>
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
+
+
+
+
+
+
+
+ <!--  <section class="section-three parallax">
     <h3  class="parallax--label">
     </h3>
     <div class="parallax--container">
       <div class="slider">
-        <div class="slide-one">
+        <div class="slide slide-one browser-height">
           <h5 class="slide--label">
             By Design
           </h5> 
@@ -78,10 +206,8 @@
             <img src="assets/brochure--event-image.jpg" alt="" class="slide-one--image">
           </div>          
           <h3>As experience becomes the luxury of today, discover</h3>
-          <h2>Villiers' exclusive brochure!</h2>
-          <button class="slider_button slide--one_button">
-            <a href="#">Read More</a>
-          </button>
+          <h1>Villiers' exclusive brochure!</h1>
+          <a class="button slider_button" href="#">Read More</a>
         </div>
         <div class="slide-two">
           <h5 class="slide--label">
@@ -123,117 +249,4 @@
         </div>
       </div>
     </div>
-  </section>
-  <section class="section-three">
-    <div class="section-three__container-one">
-      <h5 class="section-label section-label--vertical">
-        Be Inspired
-      </h5>
-      <h2>
-        Out of desire, to inspire
-      </h2>
-      <h4>
-        <a href="#">Browse Our Journal</a>
-      </h4> 
-      <div class="boxes--wrapper">
-        <div class="column_left">
-          <div class="box box-one">
-            <div class="image--overlay">
-              <img src="" alt="" class="box-one--image">
-            </div>
-            <div class="box-one--content__container">
-              <h3 class="boxes__title">Will Taylor Swift perform in Scotland in 2018?</h3>
-              <span class="boxes__link">Read more</span>
-            </div>
-          </div>
-        </div>
-        <div class="column_right">
-          <div class="box box-two">
-            <div class="image--overlay">
-              <img src="" alt="" class="box-two--image">
-            </div>  
-            <div class="box-two--content__container">
-              <h3 class="boxes--title">Peter Kay UK and Ireland Arena Tour 2018-19</h3>
-              <span class="boxes--link">Read more</span>
-            </div>
-          </div>
-          <div class="box box-three">
-            <div class="image--overlay">
-              <img src="" alt="" class="box-three--image">
-            </div>  
-            <div class="box-three--content__container">
-              <h3 class="boxes--title">Taylor Swift stadium tour announced US tour dates!</h3>
-              <span class="boxes--link">Read more</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-three--container-two">
-      <div class="cta--container">
-        <img src="" alt="" class="logo_large">
-        <h2 class="cta--title">
-          Put yourself in the know and discover the most exclusive upcoming events before anyone else.
-        </h2>
-        <h4 class="cta--subtitle">
-         Sign up to our Newsletter
-        </h4>
-        <div class="signup--container">
-          <input type="text" class="signup--input" placeholder="Email address">
-        <button class="signup--button">
-         Send
-        </button>
-     </div>
-   </div>
- </div>
-  </section>
-</body>
-<footer>
-  <div class="footer--wrapper">
-    <div class="footer__menu--container">
-      <ul class="footer__menu">
-        <li class="footer__menu--item">
-          <a href="#">Who we are</a>
-        </li>
-        <li class="footer__menu--item">
-          <a href="#">What we do</a>
-        </li>
-        <li class="footer__menu--item">
-          <a href="#">Our Journal</a>
-        </li>
-        <li class="footer__menu--item">
-          <a href="#">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__bottom--container">
-      <a href="" class="footer--logo">
-        <img src="assets/villiers--footer-logo.svg">
-      </a>
-      <div class="social--icons">
-        <a href="" class="social--icon"><img src="assets/linkedin--social_icon.png" alt=""></a>
-        <a href="" class="social--icon"><img src="assets/twitter--social_icon.png" alt=""></a>
-        <a href="" class="social--icon"><img src="assets/instagram--social_icon.png" alt=""></a>
-      </div>
-      <div class="copyright">
-        <p class="copyright--text">
-          © Copyright Simone 2017. All rights reserved. Website by... ME!!
-        </p>
-      </div>
-      <div class="footer--secondary__menu">
-        <ul>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Terms and Conditions</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-</html>
+  </section> -->
