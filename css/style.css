@@ -105,6 +105,7 @@ section {
   --darknavy: #182638;
   --gold: #b37c57;
   --white: #ffffff;
+  --grey: #8c939c;
   --black: #000000;
 /*fonts*/
   --playfair-font: 'Playfair Display', serif;;
@@ -233,7 +234,6 @@ li {
 }
 
 .main-menu {
-  flex: 2;
   cursor: pointer;
 }
   .main-menu i {
@@ -250,17 +250,22 @@ li {
   }
 
 .logo--container {
-  flex-grow: 25;
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   .logo--container img {
-    align-items: center;
     width: 175px;
     margin-top: 50px;
-    transform: translateX(50%);
+    transform: translateX(60%);
   }
 
 .phone-number--container {
-  flex-grow: 1;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
 }
   .contact-number {
     font-family: var(--source-sans-font);
@@ -271,6 +276,11 @@ li {
   }
   .fa-phone {
     margin-right: 8px;
+    font-size: 1.125em;
+    line-height: 1em;
+  }
+  .fa-search {
+    color: var(--white);
   }
 
 .search-icon--container {
@@ -292,7 +302,7 @@ li {
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   max-width: 1050px;
   height: 100%;
   margin: 0 auto;
@@ -307,7 +317,9 @@ li {
 /*section-two*/
 .section-two {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+  position: relative;
+  overflow: hidden;
 }
 
 .section-two--title-container {
@@ -334,7 +346,6 @@ a.section-two--button {
 
 .section-two--img-container {
   width: 50vw; 
-  position: relative;
 }
   .section-two--img-container img {
     height: auto;
@@ -344,9 +355,10 @@ a.section-two--button {
 
 .section-two--label {
   position: absolute;
-  left: 665px;
-  top: 95px;
+  top: 60px;
+  right: 55%;
   padding-right: 25px;
+  z-index: 1;
 }
   .section-two--label:before {
     content: "";
@@ -377,6 +389,7 @@ a.section-two--button {
 /*section-three*/
 .section-three {
   display: flex;
+  margin-top: -3px;
 }
 .slide-one {
   display: flex;
@@ -429,16 +442,19 @@ a.section-two--button {
     font-size: 3.25em;
     line-height: 1.2307692308em;
   }
+  .slide--inner-content h3 {
+    padding: 0 5%;
+  }
 
 /*section-four*/
 .section-four {
-  max-width: 1300px;
   position: relative;
   background-image: url(../assets/villiers--logo-emblem.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 95%;
   background-size: 75% 150px;
+  overflow: hidden;
 }
 
 .section-four--label {
@@ -572,7 +588,7 @@ a.section-two--button {
 .section-four--link {
   position: absolute;
   bottom: 170px;
-  right: 90px;
+  right: 15em;
   color: var(--darknavy);
   font-size: 15px;
   line-height: 21px;
@@ -649,6 +665,8 @@ a.section-two--button {
   margin-top: 30px;
   display: inline-flex;
   margin-bottom: 40px;
+  width: 90%;
+  max-width: 450px;
 }
 
 .signup--container a.submit-button {
@@ -662,8 +680,7 @@ a.section-two--button {
   margin: 0;
   outline: none;
   font-size: 18px;
-  width: 20vw;
-  max-width: 100%;
+  width: 100%;
 }
 
 
@@ -693,6 +710,9 @@ footer {
   justify-content: baseline;
   align-items: center;
   padding: 30px 0;
+  color: var(--grey);
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 
 .first-column {
@@ -715,7 +735,9 @@ footer {
   align-self: flex-end;
 }
   .copyright p {
-    color: var(--white);
+    font-size: 0.75em;
+    line-height: 1.333333em;
+    letter-spacing: 1px;
   }
 
 .footer--logo {
@@ -726,6 +748,10 @@ footer {
 
 .footer--secondary-menu {
   align-self: flex-end;
+  font-size: 0.75em;
+  line-height: 1.333333em;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .footer--secondary-menu ul {
   display: flex;
@@ -747,13 +773,21 @@ footer {
     text-transform: none;
     font-size: 0.875;
     font-weight: 400;
-    color: var(--white);
+    color: var(--grey);
   }
 
 
 
 /*media-queries*/
-@media only screen and (max-width: 1400px), screen and (max-height: 880px) {
+@media (min-width: 1400px) {
+  .slide--inner-content h1 {
+    font-size: 92px;
+    line-height: 100px;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
   h1 {
     font-size: 3.4375em;
     line-height: 1.0666666667em;
@@ -797,24 +831,115 @@ footer {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1550px) {
+  .footer-menu {
+    font-size: 0.75em;
+    font-weight: 300;
+  }
+  .footer-bottom--container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 60px;
+  }
+  .first-column {
+    align-items: center;
+    order: 2;
+  }
+  .social-icons {
+    margin: 30px auto;
+  }
+  .copyright {
+    margin-bottom: 30px;
+  }
+  .copyright p {
+    font-size: 0.75em;
+    line-height: 1.333333em;
+  }
+  .footer--secondary-menu {
+    align-self: center; 
+    order: 4;
+}
+
+@media (max-width: 1075px) {
   h2,
   .section-two--title,
   .box--title {
     font-size: 1.65em;
     line-height: 1.5333333333em;
   }
+}
+
+@media (max-width: 1024px) {
+/*  h2,
+  .section-two--title,
+  .box--title {
+    font-size: 1.65em;
+    line-height: 1.5333333333em;
+  }*/
   .button {
     padding: 20px 30px 20px 33px;  
   }
   .section-two--title-container {
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 70px 3% 0 5%;
+    padding: 100px 3% 0 5%;
   }
   .section-four {
     background-size: 75% 110px;
   }
+}
+
+@media (max-width: 855px) {
+  .section-two {
+    flex-direction: column;
+    position: relative;
+  }
+  .section-two--label {
+    position: absolute;
+    left: 62%;
+    top: 60px;
+    width: 120px;
+  }
+  .section-two--title-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 110px 0 70px;
+    align-items: flex-start;
+  }
+  .section-two--img-container {
+    width: 100%;
+  }
+.section-two--img-container img {
+    width: 100%;
+    max-height: none;
+    max-width: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo--container img {
+    transform: translateX(25%);
+  }
+  .phone-number--container {
+    justify-content: flex-end;
+  }
+  .contact-number span{
+    display: none;
+  }
+  .section-four--link {
+    right: 50%;
+    transform: translateX(50%);
+    width: 180px;
+  }
+}
+
+
+
+
+
+
+
+
   /*.section-four--link:after {
       width: 90%;
   }
