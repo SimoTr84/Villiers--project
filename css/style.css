@@ -459,7 +459,7 @@ a.section-two--button {
 
 .section-four--label {
   position: absolute;
-  left: -110px;
+  left: 0;
   top: 165px;
   transform: rotate(-90deg);
   padding-right: 25px;
@@ -870,12 +870,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-/*  h2,
-  .section-two--title,
-  .box--title {
-    font-size: 1.65em;
-    line-height: 1.5333333333em;
-  }*/
   .button {
     padding: 20px 30px 20px 33px;  
   }
@@ -887,6 +881,32 @@ footer {
   .section-four {
     background-size: 75% 110px;
   }
+  .section-four--label {
+    display: none;
+  }
+/*  .section-four--link:after {
+    width: 90%;
+  }
+  .boxes--wrapper {
+    display: block;
+    margin: 0;
+  }
+  .column-left {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .column-right {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .box {
+    width: auto;
+    height: 350px;
+  }*/
 }
 
 @media (max-width: 855px) {
@@ -940,29 +960,6 @@ footer {
 
 
 
-  /*.section-four--link:after {
-      width: 90%;
-  }
-  .boxes--wrapper {
-    display: block;
-    margin: 0;
-  }
-  .column-left {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-  .column-right {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-  .box {
-    width: auto;
-    height: 350px;
-  }*/
 }
 
 
